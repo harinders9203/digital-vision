@@ -2,6 +2,10 @@ const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.querySelector(".dots");
 const prev = document.querySelector(".left");
 const next = document.querySelector(".right");
+const nav = document.querySelector(".nav");
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+const menuLinks = document.querySelectorAll(".menu a");
 
 let index = 0;
 
@@ -45,4 +49,26 @@ if (slides.length && dotsContainer && prev && next) {
     prev.addEventListener("click", prevSlide);
 
     setInterval(nextSlide, 5000);
+}
+
+if (nav && menuToggle && menu) {
+    function closeMenu() {
+        nav.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+    }
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("menu-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
 }

@@ -27,6 +27,27 @@
     border-radius: 10px;
 }
 
+.menu-toggle{
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #111827;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .menu a{
     text-decoration: none;
     color: black;
@@ -201,5 +222,240 @@
 
     .tagline{
         font-size: 16px;
+    }
+}
+
+html,
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogs{
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.blog img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px){
+    .nav{
+        height: auto;
+        padding: 16px 20px;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .logo,
+    .cont{
+        flex: 0 0 auto;
+    }
+
+    .menu{
+        width: 100%;
+        order: 3;
+        gap: 12px 20px;
+    }
+
+    .menu a{
+        margin: 0;
+    }
+
+    #slider{
+        height: 560px;
+    }
+
+    .content{
+        left: 8%;
+        right: 8%;
+        max-width: 560px;
+    }
+
+    .content h1{
+        font-size: 44px;
+    }
+
+    .box{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 40px 24px;
+    }
+
+    .b1, .b2, .b3, .b4{
+        width: calc(50% - 12px);
+        max-width: 320px;
+    }
+
+    .blog{
+        gap: 24px;
+        padding: 32px 24px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px){
+    .nav{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo{
+        width: auto;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .menu-toggle{
+        display: inline-flex;
+        order: 2;
+    }
+
+    .menu{
+        display: none;
+        order: 3;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 0 0;
+    }
+
+    .nav.menu-open .menu{
+        display: flex;
+    }
+
+    .menu a{
+        width: 100%;
+        padding: 14px 0;
+        border-top: 1px solid rgba(17, 24, 39, 0.08);
+        text-align: center;
+    }
+
+    .cont{
+        display: none;
+        order: 4;
+        width: 100%;
+        min-width: 120px;
+        padding: 0 16px;
+        margin-top: 12px;
+    }
+
+    .nav.menu-open .cont{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav.menu-open .menu-toggle span:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav.menu-open .menu-toggle span:nth-child(2){
+        opacity: 0;
+    }
+
+    .nav.menu-open .menu-toggle span:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #slider{
+        height: 480px;
+    }
+
+    .content h1{
+        font-size: 34px;
+    }
+
+    .arrow{
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .left{
+        left: 12px;
+    }
+
+    .right{
+        right: 12px;
+    }
+
+    .box{
+        padding: 32px 20px;
+    }
+
+    .b1, .b2, .b3, .b4{
+        width: 100%;
+        max-width: none;
+        height: 220px;
+    }
+
+    .b1:hover .heading, .b2:hover .heading, .b3:hover .heading, .b4:hover .heading{
+        transform: translateY(-60px);
+    }
+
+    .blog{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 24px 20px;
+    }
+
+    .blog h2,
+    .blog p{
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px){
+    .nav{
+        padding: 14px 16px;
+    }
+
+    .menu{
+        gap: 10px 14px;
+    }
+
+    .menu a{
+        font-size: 16px;
+    }
+
+    #slider{
+        height: 420px;
+    }
+
+    .content{
+        left: 6%;
+        right: 6%;
+    }
+
+    .content h1{
+        font-size: 28px;
+    }
+
+    .tagline{
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .heading{
+        font-size: 24px;
+    }
+
+    .b1, .b2, .b3, .b4{
+        height: 190px;
     }
 }
