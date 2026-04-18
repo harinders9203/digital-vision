@@ -197,7 +197,7 @@ textarea{
 .slide{
     position: absolute;
     inset: 0;
-    background-position: center;
+    background-position: var(--bg-position, center center);
     background-size: cover;
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -208,7 +208,7 @@ textarea{
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(110deg, rgba(15, 23, 42, 0.84) 0%, rgba(15, 23, 42, 0.54) 48%, rgba(15, 23, 42, 0.72) 100%);
+        linear-gradient(112deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.5) 46%, rgba(15, 23, 42, 0.76) 100%);
 }
 
 .slide.active{
@@ -223,12 +223,17 @@ textarea{
     grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.72fr);
     align-items: center;
     gap: 36px;
-    padding: clamp(40px, 6vw, 72px);
+    padding:
+        clamp(40px, 6vw, 72px)
+        clamp(40px, 6vw, 72px)
+        clamp(128px, 14vw, 156px);
 }
 
 .content{
     max-width: 660px;
     color: white;
+    align-self: start;
+    padding-top: clamp(6px, 1.6vw, 22px);
 }
 
 .eyebrow,
@@ -256,27 +261,48 @@ textarea{
 }
 
 .content h1{
-    font-size: clamp(3rem, 5.8vw, 5.4rem);
-    max-width: 10ch;
+    font-size: clamp(2.7rem, 5.1vw, 4.85rem);
+    max-width: 9.3ch;
+}
+
+.slide--compact .content h1{
+    font-size: clamp(2.4rem, 4.3vw, 4.1rem);
+    max-width: 8.2ch;
 }
 
 .hero-copy{
     margin-top: 20px;
-    max-width: 560px;
+    max-width: 520px;
     color: rgba(255, 255, 255, 0.82);
-    font-size: 1.08rem;
+    font-size: 1rem;
+}
+
+.slide--compact .hero-copy{
+    max-width: 470px;
 }
 
 .hero-actions{
-    margin-top: 30px;
+    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
 }
 
+.slide--compact .hero-actions{
+    margin-top: 20px;
+}
+
+.hero-actions .btn{
+    min-width: 160px;
+}
+
+.slide--compact .hero-actions .btn{
+    min-width: 148px;
+}
+
 .btn{
-    padding: 15px 22px;
-    font-size: 0.98rem;
+    padding: 13px 18px;
+    font-size: 0.92rem;
     font-weight: 700;
 }
 
@@ -287,8 +313,8 @@ textarea{
 }
 
 .btn-secondary{
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.34);
     color: white;
 }
 
@@ -357,35 +383,46 @@ textarea{
 .arrow{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    width: 50px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 4;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(15, 23, 42, 0.28);
     color: white;
-    font-size: 28px;
+    font-size: 20px;
     cursor: pointer;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    transform: translateY(-50%);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.left{
-    left: 24px;
+.arrow:hover{
+    transform: translateY(-50%) scale(1.04);
+    background: rgba(249, 115, 22, 0.84);
+    border-color: rgba(249, 115, 22, 0.92);
 }
 
-.right{
-    right: 24px;
+.arrow:focus-visible,
+.dot:focus-visible{
+    outline: 3px solid rgba(249, 115, 22, 0.26);
+    outline-offset: 3px;
 }
 
 .dots{
     position: absolute;
+    bottom: 24px;
     left: 50%;
-    bottom: 28px;
+    z-index: 4;
     transform: translateX(-50%);
-    z-index: 3;
     display: flex;
+    align-items: center;
     gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.34);
+    backdrop-filter: blur(12px);
 }
 
 .dot{
@@ -395,10 +432,20 @@ textarea{
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.36);
     cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .dot.active{
-    background: white;
+    background: var(--accent-soft);
+    transform: scale(1.18);
+}
+
+.left{
+    left: 20px;
+}
+
+.right{
+    right: 20px;
 }
 
 .trust-strip,
@@ -937,6 +984,7 @@ body.modal-open{
 
     .slide-shell{
         min-height: 700px;
+        padding: 48px 40px 144px;
     }
 
     .overview-grid,
@@ -1037,16 +1085,24 @@ body.modal-open{
 
     .slide-shell{
         min-height: 660px;
-        padding: 34px 24px 72px;
+        padding: 34px 24px 140px;
     }
 
     .content h1{
         max-width: none;
-        font-size: clamp(2.6rem, 11vw, 4rem);
+        font-size: clamp(2.3rem, 10.5vw, 3.6rem);
+    }
+
+    .slide--compact .content h1{
+        font-size: clamp(2.05rem, 8.8vw, 3.05rem);
     }
 
     .hero-copy{
         font-size: 1rem;
+    }
+
+    .slide--compact .hero-copy{
+        max-width: 100%;
     }
 
     .hero-actions,
@@ -1057,6 +1113,11 @@ body.modal-open{
     .hero-actions .btn,
     .cta-band .btn{
         width: 100%;
+        min-width: 0;
+    }
+
+    .slide--compact .hero-actions .btn{
+        min-width: 0;
     }
 
     .hero-metrics{
@@ -1064,19 +1125,17 @@ body.modal-open{
     }
 
     .arrow{
-        top: auto;
-        bottom: 82px;
-        width: 42px;
-        height: 42px;
-        font-size: 22px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 
     .left{
-        left: 18px;
+        left: 14px;
     }
 
     .right{
-        right: 18px;
+        right: 14px;
     }
 
     .section{
@@ -1097,11 +1156,21 @@ body.modal-open{
 
     .slide-shell{
         min-height: 620px;
-        padding: 30px 18px 74px;
+        padding: 28px 18px 132px;
     }
 
     #slider{
         height: 620px;
+    }
+
+    .dots{
+        bottom: 18px;
+        gap: 8px;
+        padding: 9px 12px;
+    }
+
+    .slide--compact .content h1{
+        font-size: clamp(1.95rem, 10vw, 2.65rem);
     }
 
     .hero-panel,

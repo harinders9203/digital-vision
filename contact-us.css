@@ -127,6 +127,7 @@ h1{
 .info-card a,
 .assurance-card li{
     color: var(--text-soft);
+    font-size: x-small;
 }
 
 .assurance-card{
