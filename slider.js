@@ -2,6 +2,7 @@ const slides = document.querySelectorAll(".slide");
 const dotsContainer = document.querySelector(".dots");
 const prev = document.querySelector(".left");
 const next = document.querySelector(".right");
+const slider = document.querySelector("#slider");
 const nav = document.querySelector(".nav");
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
@@ -9,17 +10,35 @@ const menuLinks = document.querySelectorAll(".menu a");
 
 let index = 0;
 
-if (slides.length && dotsContainer && prev && next) {
+if (slides.length && dotsContainer && prev && next && slider) {
+    let autoPlayId = null;
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayId = window.setInterval(nextSlide, 5500);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayId) {
+            window.clearInterval(autoPlayId);
+            autoPlayId = null;
+        }
+    }
+
     slides.forEach((_, i) => {
         const dot = document.createElement("button");
         dot.classList.add("dot");
         dot.type = "button";
+        dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
 
         if (i === 0) {
             dot.classList.add("active");
         }
 
-        dot.addEventListener("click", () => showSlide(i));
+        dot.addEventListener("click", () => {
+            showSlide(i);
+            startAutoPlay();
+        });
         dotsContainer.appendChild(dot);
     });
 
@@ -45,10 +64,22 @@ if (slides.length && dotsContainer && prev && next) {
         showSlide(i);
     }
 
-    next.addEventListener("click", nextSlide);
-    prev.addEventListener("click", prevSlide);
+    next.addEventListener("click", () => {
+        nextSlide();
+        startAutoPlay();
+    });
 
-    setInterval(nextSlide, 5000);
+    prev.addEventListener("click", () => {
+        prevSlide();
+        startAutoPlay();
+    });
+
+    slider.addEventListener("mouseenter", stopAutoPlay);
+    slider.addEventListener("mouseleave", startAutoPlay);
+    slider.addEventListener("focusin", stopAutoPlay);
+    slider.addEventListener("focusout", startAutoPlay);
+
+    startAutoPlay();
 }
 
 if (nav && menuToggle && menu) {

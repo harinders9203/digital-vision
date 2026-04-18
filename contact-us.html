@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Digital Vision Group</title>
+    <link rel="stylesheet" href="contact-us.css">
+</head>
+
+<body>
+    <main class="contact-page">
+        <a class="back-link" href="index.html">Back to home</a>
+
+        <section class="contact-layout">
+            <div class="contact-copy">
+                <p class="eyebrow">Start a conversation</p>
+                <h1>Tell us where your brand needs more momentum.</h1>
+                <p class="intro">
+                    Whether you need a cleaner website, stronger campaigns, or a more polished marketing presence,
+                    we're ready to help shape the next step.
+                </p>
+
+                <div class="contact-cards">
+                    <article class="info-card">
+                        <h2>Email</h2>
+                        <p><a href="mailto:hello@digitalvisiongroup.com">hello@digitalvisiongroup.com</a></p>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Phone</h2>
+                        <p><a href="tel:+61390001234">+61 3 9000 1234</a></p>
+                    </article>
+
+                    <article class="info-card">
+                        <h2>Location</h2>
+                        <p>Melbourne, Australia</p>
+                    </article>
+                </div>
+
+                <article class="assurance-card">
+                    <h2>What happens next</h2>
+                    <ul>
+                        <li>We review your goals, channels, and current challenges.</li>
+                        <li>We recommend the best first step based on business impact.</li>
+                        <li>We reply with a clear, professional next-step plan.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <form class="contact-form" action="submit_form.php" method="post">
+                <p class="form-kicker">Contact form</p>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell us what you need help with." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

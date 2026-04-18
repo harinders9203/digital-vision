@@ -4,126 +4,513 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Vision Group</title>
+    <title>Digital Vision Group | Performance Marketing Studio</title>
     <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-    <div class="nav">
-        <div class="logo">
-            <a href="index.html"><img src="img/logo/logo-removebg-preview.png" alt="Digital vision group"
-                    width="80"></a>
+    <header class="site-header" id="top">
+        <div class="nav">
+            <div class="logo">
+                <a href="index.html" aria-label="Digital Vision Group home">
+                    <img src="img/logo/logo-removebg-preview.png" alt="Digital Vision Group logo" width="72">
+                    <div class="brand-copy">
+                        <span>Digital Vision Group</span>
+                        <small>Performance Marketing Studio</small>
+                    </div>
+                </a>
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="menu" id="primary-menu">
+                <a href="#top">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#insights">Insights</a>
+                <a href="contact-us.html">Contact</a>
+            </nav>
+
+            <button class="cont" type="button" data-contact-trigger aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-popup">
+                Get in touch
+            </button>
         </div>
+    </header>
 
-        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <main>
+        <section id="slider" aria-label="Featured digital marketing solutions">
+            <div class="slide active" style="background-image: url('img/banners/banner1.jpg');">
+                <div class="slide-shell">
+                    <div class="content">
+                        <p class="eyebrow">Performance-led digital growth</p>
+                        <h1>Marketing systems that turn attention into revenue.</h1>
+                        <p class="hero-copy">
+                            We help ambitious brands bring strategy, content, paid media, and web execution into one
+                            premium growth engine.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#services">Explore services</a>
+                            <button class="btn btn-secondary" type="button" data-contact-trigger aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-popup">
+                                Start a conversation
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="menu" id="primary-menu">
-            <a href="#">Home</a>
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="#">Contact us</a>
-        </div>
+                    <aside class="hero-panel">
+                        <p class="hero-panel__label">Built for teams that need</p>
+                        <ul class="hero-points">
+                            <li>Clear campaign strategy and reporting</li>
+                            <li>Sharper creative direction across channels</li>
+                            <li>Landing pages designed to convert better</li>
+                        </ul>
+                        <div class="hero-metrics">
+                            <div>
+                                <strong>32%</strong>
+                                <span>average lead quality lift</span>
+                            </div>
+                            <div>
+                                <strong>4 weeks</strong>
+                                <span>to launch a new campaign system</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
 
-        <div class="cont">
-            Get in touch
-        </div>
-    </div>
+            <div class="slide" style="background-image: url('img/banners/banner2.jpg');">
+                <div class="slide-shell">
+                    <div class="content">
+                        <p class="eyebrow">Social media with intent</p>
+                        <h1>Make every post feel aligned with the brand and the business goal.</h1>
+                        <p class="hero-copy">
+                            From monthly content planning to campaign rollouts, we help your brand stay visible,
+                            consistent, and commercially relevant.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#services">See what we manage</a>
+                            <a class="btn btn-secondary" href="contact-us.html">Contact page</a>
+                        </div>
+                    </div>
 
-    <div id="slider">
-        <div class="slide active" style="background-image: url('img/banners/banner1.jpg');">
-            <div class="content">
-                <p class="tagline">Providing Brilliant Ideas For Your Business.</p>
-                <h1>Your Ideas Realized For The Real World.</h1>
+                    <aside class="hero-panel">
+                        <p class="hero-panel__label">Ideal for brands that want</p>
+                        <ul class="hero-points">
+                            <li>Better consistency across social channels</li>
+                            <li>Professional creative direction and copy</li>
+                            <li>Content calendars that support real offers</li>
+                        </ul>
+                        <div class="hero-metrics">
+                            <div>
+                                <strong>3x</strong>
+                                <span>stronger content consistency</span>
+                            </div>
+                            <div>
+                                <strong>Weekly</strong>
+                                <span>structured publishing rhythm</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('img/banners/banner3.jpg');">
+                <div class="slide-shell">
+                    <div class="content">
+                        <p class="eyebrow">Paid media that stays accountable</p>
+                        <h1>Ads management built around performance, not guesswork.</h1>
+                        <p class="hero-copy">
+                            We set up campaigns, landing paths, and reporting that make it easier to see what is
+                            working and where to scale next.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary" type="button" data-contact-trigger aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-popup">
+                                Plan my campaign
+                            </button>
+                            <a class="btn btn-secondary" href="#about">How we work</a>
+                        </div>
+                    </div>
+
+                    <aside class="hero-panel">
+                        <p class="hero-panel__label">Focused on</p>
+                        <ul class="hero-points">
+                            <li>Audience and offer alignment</li>
+                            <li>Landing page and ad message consistency</li>
+                            <li>Reporting that ties back to decisions</li>
+                        </ul>
+                        <div class="hero-metrics">
+                            <div>
+                                <strong>24/7</strong>
+                                <span>campaign visibility and oversight</span>
+                            </div>
+                            <div>
+                                <strong>1 team</strong>
+                                <span>from strategy through execution</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('img/banners/banner4.jpg');">
+                <div class="slide-shell">
+                    <div class="content">
+                        <p class="eyebrow">Search visibility with substance</p>
+                        <h1>SEO strategy that strengthens both discoverability and trust.</h1>
+                        <p class="hero-copy">
+                            We improve the structure, content, and message of your website so the right audience finds
+                            you and feels confident to enquire.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#insights">View insights</a>
+                            <button class="btn btn-secondary" type="button" data-contact-trigger aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-popup">
+                                Request an audit
+                            </button>
+                        </div>
+                    </div>
+
+                    <aside class="hero-panel">
+                        <p class="hero-panel__label">Our SEO focus includes</p>
+                        <ul class="hero-points">
+                            <li>Search intent mapping and on-page structure</li>
+                            <li>Higher quality traffic and user clarity</li>
+                            <li>Content that supports authority over time</li>
+                        </ul>
+                        <div class="hero-metrics">
+                            <div>
+                                <strong>90 days</strong>
+                                <span>to establish a cleaner SEO foundation</span>
+                            </div>
+                            <div>
+                                <strong>Better</strong>
+                                <span>alignment between search and conversion</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('img/banners/banner6.jpg');">
+                <div class="slide-shell">
+                    <div class="content">
+                        <p class="eyebrow">Web experiences that feel premium</p>
+                        <h1>Build websites that look polished and guide visitors toward action.</h1>
+                        <p class="hero-copy">
+                            We create pages that support campaigns, communicate value clearly, and give your business a
+                            stronger first impression.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary" type="button" data-contact-trigger aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-popup">
+                                Scope a website project
+                            </button>
+                            <a class="btn btn-secondary" href="contact-us.html">Talk to the team</a>
+                        </div>
+                    </div>
+
+                    <aside class="hero-panel">
+                        <p class="hero-panel__label">Designed for</p>
+                        <ul class="hero-points">
+                            <li>Stronger first impressions from paid and organic traffic</li>
+                            <li>Clearer service positioning and conversion paths</li>
+                            <li>Responsive experiences that still feel refined</li>
+                        </ul>
+                        <div class="hero-metrics">
+                            <div>
+                                <strong>Mobile-first</strong>
+                                <span>layouts for every key section</span>
+                            </div>
+                            <div>
+                                <strong>Fast</strong>
+                                <span>handoff from website to enquiry</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <button class="arrow left" type="button" aria-label="Previous slide">&#10094;</button>
+            <button class="arrow right" type="button" aria-label="Next slide">&#10095;</button>
+            <div class="dots"></div>
+        </section>
+
+        <section class="trust-strip">
+            <p>Trusted thinking across every part of the funnel.</p>
+            <div class="trust-items">
+                <span>Paid Media</span>
+                <span>Social Strategy</span>
+                <span>SEO</span>
+                <span>Web Design</span>
+                <span>Campaign Reporting</span>
+            </div>
+        </section>
+
+        <section class="section overview" id="about">
+            <div class="section-heading">
+                <p class="section-kicker">About us</p>
+                <h2>We make digital marketing feel organized, premium, and accountable.</h2>
+                <p>
+                    Digital Vision Group partners with brands that want polished execution, stronger reporting, and a
+                    team that can move from idea to delivery without friction.
+                </p>
+            </div>
+
+            <div class="overview-grid">
+                <article class="overview-card overview-card--story">
+                    <h3>What working with us feels like</h3>
+                    <p>
+                        Strategy, creative direction, paid campaigns, SEO, and landing pages delivered under one
+                        calm, high-standards workflow. The result is a business presence that feels more intentional
+                        from the first glance.
+                    </p>
+                    <div class="feature-list">
+                        <span>Senior-led planning</span>
+                        <span>Clean brand presentation</span>
+                        <span>Responsive delivery</span>
+                        <span>Conversion-focused decisions</span>
+                    </div>
+                </article>
+
+                <div class="overview-stack">
+                    <article class="overview-card stat-card">
+                        <strong>Full-funnel support</strong>
+                        <p>From visibility campaigns to conversion-focused landing pages and reporting.</p>
+                    </article>
+                    <article class="overview-card stat-card">
+                        <strong>Professional execution</strong>
+                        <p>Every touchpoint is refined so your business looks credible from the first click.</p>
+                    </article>
+                    <article class="overview-card stat-card">
+                        <strong>One accountable team</strong>
+                        <p>No fragmented handoffs between strategy, design, and ongoing marketing management.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services" id="services">
+            <div class="section-heading">
+                <p class="section-kicker">Services</p>
+                <h2>Specialist support for the channels that matter most.</h2>
+                <p>
+                    We combine strategy and execution so your marketing looks stronger, performs better, and feels more
+                    consistent across every channel.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <span class="service-index">01</span>
+                    <h3>Social Media Management</h3>
+                    <p>
+                        Content planning, creative direction, copy support, and platform management that keeps your
+                        brand visible and credible.
+                    </p>
+                    <ul class="service-points">
+                        <li>Monthly content calendars</li>
+                        <li>Brand-aligned publishing</li>
+                        <li>Campaign rollout support</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-index">02</span>
+                    <h3>Ads Management</h3>
+                    <p>
+                        Paid campaigns built around clear offers, cleaner reporting, and landing paths that improve
+                        conversion confidence.
+                    </p>
+                    <ul class="service-points">
+                        <li>Search and social campaign setup</li>
+                        <li>Audience and creative testing</li>
+                        <li>Performance review cycles</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-index">03</span>
+                    <h3>SEO Strategy</h3>
+                    <p>
+                        Search improvements that strengthen discoverability, clarify your offer, and support better
+                        quality inbound traffic.
+                    </p>
+                    <ul class="service-points">
+                        <li>On-page SEO recommendations</li>
+                        <li>Intent-led content direction</li>
+                        <li>Technical structure guidance</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-index">04</span>
+                    <h3>Website Building</h3>
+                    <p>
+                        Responsive websites and campaign pages designed to present your business well and guide visitors
+                        toward a clear next step.
+                    </p>
+                    <ul class="service-points">
+                        <li>Landing pages and service pages</li>
+                        <li>Responsive interface design</li>
+                        <li>Conversion-focused page structure</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section process">
+            <div class="section-heading">
+                <p class="section-kicker">How we work</p>
+                <h2>A simple process that keeps strategy, creative, and delivery aligned.</h2>
+                <p>
+                    Our process is structured enough to feel reliable and flexible enough to move at the pace your
+                    business needs.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <article class="process-step">
+                    <span>01</span>
+                    <h3>Audit and alignment</h3>
+                    <p>We review your brand presence, goals, offers, and current performance before setting direction.</p>
+                </article>
+
+                <article class="process-step">
+                    <span>02</span>
+                    <h3>Build the growth system</h3>
+                    <p>We shape the campaigns, messaging, content, and landing experiences around what matters most.</p>
+                </article>
+
+                <article class="process-step">
+                    <span>03</span>
+                    <h3>Refine and scale</h3>
+                    <p>We use reporting, feedback, and iteration to improve quality, clarity, and conversion results.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section insights" id="insights">
+            <div class="section-heading">
+                <p class="section-kicker">Insights</p>
+                <h2>Topics we help clients think through every week.</h2>
+                <p>
+                    Better marketing decisions come from better clarity. These are the kinds of conversations we bring
+                    into client strategy sessions.
+                </p>
+            </div>
+
+            <div class="insights-grid">
+                <article class="insight-card">
+                    <div class="insight-card__image">
+                        <img src="img/blogs/google.png" alt="Google search strategy illustration">
+                    </div>
+                    <div class="insight-card__body">
+                        <p class="insight-meta">SEO Strategy</p>
+                        <h3>How to turn search intent into higher quality inquiries</h3>
+                        <p>Clarify your pages around user intent so traffic quality improves alongside visibility.</p>
+                        <a href="contact-us.html">Request this strategy</a>
+                    </div>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-card__image">
+                        <img src="img/blogs/meta.png" alt="Social media campaign illustration">
+                    </div>
+                    <div class="insight-card__body">
+                        <p class="insight-meta">Paid Social</p>
+                        <h3>Why message consistency matters more than campaign complexity</h3>
+                        <p>Strong campaigns usually come from sharper offers and cleaner landing experiences, not more noise.</p>
+                        <a href="contact-us.html">Discuss your campaigns</a>
+                    </div>
+                </article>
+
+                <article class="insight-card">
+                    <div class="insight-card__image">
+                        <img src="img/blogs/google.png" alt="Website conversion planning illustration">
+                    </div>
+                    <div class="insight-card__body">
+                        <p class="insight-meta">Web Experience</p>
+                        <h3>What a client-ready website should communicate in the first few seconds</h3>
+                        <p>Credibility, clarity, and a direct next step are what move visitors from interest to action.</p>
+                        <a href="contact-us.html">Upgrade your website</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section cta-band">
+            <div class="cta-band__copy">
+                <p class="section-kicker">Ready when you are</p>
+                <h2>Need a marketing partner that already looks client-ready?</h2>
+                <p>
+                    Let's shape the next phase of your brand with cleaner strategy, stronger creative, and a sharper
+                    website experience.
+                </p>
+            </div>
+            <div class="cta-band__actions">
+                <button class="btn btn-primary" type="button" data-contact-trigger aria-haspopup="dialog" aria-expanded="false" aria-controls="contact-popup">
+                    Book a discovery call
+                </button>
+                <a class="btn btn-secondary" href="contact-us.html">Open contact page</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo-removebg-preview.png" alt="Digital Vision Group logo" width="64">
+                    <div>
+                        <strong>Digital Vision Group</strong>
+                        <p>Performance marketing studio</p>
+                    </div>
+                </div>
+                <p>
+                    Digital Vision Group helps businesses grow through focused digital marketing, better conversion
+                    pathways, and web experiences that look polished from the very first visit.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#insights">Insights</a>
+                <a href="contact-us.html">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <h2>Core Services</h2>
+                <a href="#services">Social media management</a>
+                <a href="#services">Ads management</a>
+                <a href="#services">SEO strategy</a>
+                <a href="#services">Website building</a>
+            </div>
+
+            <div class="footer-section-contact">
+                <h2>Contact Us</h2>
+                <p><a href="mailto:hello@digitalvisiongroup.com">hello@digitalvisiongroup.com</a></p>
+                <p><a href="tel:+61390001234">+61 3 9000 1234</a></p>
+                <p>Melbourne, Australia</p>
+            </div>
+
+            <div class="footer-section-map">
+                <h2>Our Location</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.953736315316!3d-37.81627977975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9a651e5e7c!2sEnvato%20Melbourne%20Office!5e0!3m2!1sen!2sau!4v1618317041234"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Digital Vision Group location map"></iframe>
             </div>
         </div>
-        <div class="slide" style="background-image: url('img/banners/banner2.jpg');">
-             <div class="content">
-                <p class="tagline">Other Heading</p>
-                <h1>New Content according to the heading</h1>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url('img/banners/banner3.jpg');">
-            <div class="content">
-                <p class="tagline">Other Heading</p>
-                <h1>New Content according to the heading</h1>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url('img/banners/banner4.jpg');">
-            <div class="content">
-                <p class="tagline">Other Heading</p>
-                <h1>New Content according to the heading</h1>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url('img/banners/banner6.jpg');">
-            <div class="content">
-                <p class="tagline">Other Heading</p>
-                <h1>New Content according to the heading</h1>
-            </div>
-        </div>
 
-        <button class="arrow left" type="button" aria-label="Previous slide">&#10094;</button>
-        <button class="arrow right" type="button" aria-label="Next slide">&#10095;</button>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Digital Vision Group. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <div class="dots"></div>
-    </div>
-
-    <h1 class="h1">Our Services</h1>
-    <div class="box">
-        <div class="b1">
-            <div class="heading">Social Media Management</div>
-            <div class="content1">
-                The given content or pic wil be appear here. The given content or pic will appear here. The given content or pic will appear here.
-            </div>
-        </div>
-        <div class="b2">
-            <div class="heading">Ads Management</div>
-             <div class="content1">
-                The given content or pic wil be appear here. The given content or pic will appear here. The given content or pic will appear here.
-            </div>
-        </div>
-        <div class="b3">
-            <div class="heading">SEO(Search Engine optimisation)</div>
-             <div class="content1">
-                The given content or pic wil be appear here. The given content or pic will appear here. The given content or pic will appear here.
-            </div>
-        </div>
-        <div class="b4">
-            <div class="heading">Website Building</div>
-             <div class="content1">
-                The given content or pic wil be appear here. The given content or pic will appear here. The given content or pic will appear here.
-            </div>
-        </div>
-    </div>
-
-
-    <div class="blogs">
-        <h1 class="h1">Blogs</h1>
-        <div class="blog">
-            <img src="img/blogs/google.png" alt="Blog 1" height="10px" width="50px">
-            <h2>Blog Title 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc bibendum
-                consectetur.</p>
-        </div>
-        <div class="blog">
-            <img src="img/blogs/google.png" alt="Blog 2" width="50px">
-            <h2>Blog Title 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc bibendum
-                consectetur.</p>
-        </div>
-        <div class="blog">
-            <img src="img/blogs/google.png" alt="Blog 3" width="50px">
-            <h2>Blog Title 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc bibendum
-                consectetur.</p>
-        </div>
-    </div>
-
-
+    <script src="slider.js"></script>
+    <script src="contact-popup.js"></script>
 </body>
-<script src="slider.js"></script>
 
 </html>
