@@ -1017,6 +1017,8 @@ body.modal-open{
 @media (max-width: 768px){
     .site-header{
         padding-top: 12px;
+        position: static;
+        z-index: 99;
     }
 
     .nav{
