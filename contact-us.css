@@ -210,9 +210,35 @@ h1{
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.contact-form button:disabled{
+    cursor: wait;
+    opacity: 0.82;
+    transform: none;
+    box-shadow: 0 12px 24px rgba(249, 115, 22, 0.2);
+}
+
 .contact-form button:hover{
     transform: translateY(-2px);
     box-shadow: 0 20px 36px rgba(249, 115, 22, 0.28);
+}
+
+.form-status{
+    min-height: 1.5rem;
+    margin-top: 4px;
+    font-size: 0.94rem;
+    font-weight: 600;
+}
+
+.form-status[data-state="pending"]{
+    color: var(--text-soft);
+}
+
+.form-status[data-state="success"]{
+    color: #15803d;
+}
+
+.form-status[data-state="error"]{
+    color: #b91c1c;
 }
 
 .contact-form button:focus-visible,

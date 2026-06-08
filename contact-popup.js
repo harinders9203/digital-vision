@@ -20,7 +20,12 @@
             <p class="contact-modal__eyebrow">Let's Talk</p>
             <h2 class="contact-modal__title" id="contact-popup-title">Tell us about your project.</h2>
             <p class="contact-modal__description">Share a few details and our team will get back to you with the next steps.</p>
-            <form class="contact-modal__form" action="submit_form.php" method="post">
+            <form class="contact-modal__form" action="https://api.web3forms.com/submit" method="post" data-web3forms>
+                <input type="hidden" name="access_key" value="6b1fbc25-6c96-45a9-8428-96580a9ae508">
+                <input type="hidden" name="subject" value="New popup enquiry from Digital Vision Group">
+                <input type="hidden" name="from_name" value="Digital Vision Group Website">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
+
                 <label class="contact-modal__label" for="contact-popup-name">Name</label>
                 <input class="contact-modal__input" type="text" id="contact-popup-name" name="name" placeholder="Your full name" required>
 
@@ -31,6 +36,7 @@
                 <textarea class="contact-modal__textarea" id="contact-popup-message" name="message" placeholder="Tell us what you need help with." required></textarea>
 
                 <button class="contact-modal__submit" type="submit">Send Message</button>
+                <p class="form-status contact-modal__status" data-form-status hidden aria-live="polite"></p>
             </form>
         </div>
     `;
