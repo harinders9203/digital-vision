@@ -1,0 +1,15 @@
+{
+    "name": "digital-vision",
+    "version": "1.0.0",
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+        "check": "node --check admin-login.js && node --check admin-editor.js && node --check api/admin.js && node --check api/auth/login.js && node --check api/auth/logout.js && node --check api/auth/me.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cookie": "^0.7.2",
+        "dotenv": "^17.4.2",
+        "jsonwebtoken": "^9.0.2"
+    }
+}

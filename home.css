@@ -680,6 +680,16 @@ textarea{
     gap: 22px;
 }
 
+.insights-empty{
+    grid-column: 1 / -1;
+    padding: 30px;
+    border: 1px dashed var(--line-strong);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.68);
+    text-align: center;
+    color: var(--text-soft);
+}
+
 .insight-card{
     overflow: hidden;
 }
@@ -693,6 +703,13 @@ textarea{
     align-items: center;
     justify-content: center;
     padding: 30px;
+}
+
+.insight-card__image--placeholder{
+    color: var(--text-soft);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 .insight-card__image img{

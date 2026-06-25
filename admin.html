@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Digital Vision Group</title>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; img-src 'self' data: https:; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none';">
+    <meta name="referrer" content="same-origin">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <section class="admin-login" data-admin-login>
+        <div class="admin-login__card">
+            <a class="admin-back" href="index.html#insights">Back to homepage</a>
+            <p class="admin-eyebrow">Restricted Access</p>
+            <h1 class="admin-login__title">Sign in to open the admin dashboard.</h1>
+            <p class="admin-intro">
+                Authentication is now verified by the backend on Vercel. Enter your admin credentials to continue to
+                the protected dashboard.
+            </p>
+
+            <form class="admin-login__form" data-admin-login-form novalidate>
+                <label class="admin-field">
+                    <span>Username</span>
+                    <input type="text" name="username" autocomplete="username" placeholder="Enter username" required>
+                </label>
+
+                <label class="admin-field">
+                    <span>Password</span>
+                    <input type="password" name="password" autocomplete="current-password" placeholder="Enter password" required>
+                </label>
+
+                <button class="admin-button admin-button--primary" type="submit" data-login-submit>Sign in</button>
+                <p class="admin-status" data-login-status hidden aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <script src="admin-login.js"></script>
+</body>
+
+</html>
